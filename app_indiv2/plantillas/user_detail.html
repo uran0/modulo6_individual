@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="fondo-custom">
+    <h1 class="display-4 titulo-custom">Usuarios Registrados</h1>
+    <ul>
+        {% for miembro in miembros %}
+            <li>
+                <strong>Nombre:</strong> {{ miembro.nombre }}<br>
+                <strong>Apodo:</strong> {{ miembro.apodo }}<br>
+                <strong>Edad:</strong> {{ miembro.edad }}<br>
+                <strong>Email:</strong> {{ miembro.email }}<br>
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

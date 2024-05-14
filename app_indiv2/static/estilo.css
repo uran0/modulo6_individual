@@ -1,0 +1,22 @@
+/* estilo de landing */
+
+.landing-saludo {
+    color: #85b8b2;
+} 
+
+/* estilos user_detail*/
+.fondo-custom {
+    background-color: #e6fff7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-custom {
+    text-align: center;
+    color: #85b8b2;
+}
+.atributo_usuario {
+    color: #3c3449;
+}
+
