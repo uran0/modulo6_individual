@@ -41,3 +41,14 @@ def es_adulto(user):
 @user_passes_test(es_adulto)
 def restricted_view(request):
     return render(request, 'restricted.html')
+
+def es_color_celeste(user):
+    try:
+        miembro = Miembros.objects.get(user=user)
+        return miembro.color_favorito.lower() == 'celeste'
+    except Miembros.DoesNotExist:
+        return False
+
+@user_passes_test(es_color_celeste)
+def color_celeste(request):
+    return render(request, 'color_celeste.html')

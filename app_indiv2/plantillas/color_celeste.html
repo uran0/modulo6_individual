@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if request.user.groups.filter(name='Celeste Group').exists %}
+
+    <p>Bienvenido, usuario con color favorito celeste.</p>
+{% else %}
+    <p>No tienes acceso a esta página.</p>
+{% endif %}
+
+{% endblock %}
