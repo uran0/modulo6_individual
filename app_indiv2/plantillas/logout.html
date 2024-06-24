@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <h2>Saliendo...</h2>
+    <p>¿Estás segura/o de que quieres cerrar la sesión actual?</p>
+    <form action="{% url 'logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-info">Cerrar Sesión</button>
+    </form>
+</div>
+
+{% endblock %}

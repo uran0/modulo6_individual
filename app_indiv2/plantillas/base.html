@@ -31,6 +31,15 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'user_detail' %}">Socios/as</a>
           </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a href="{% url 'logout' %}" class="nav-link">Cerrar Sesión</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a href="{% url 'login' %}" class="nav-link">Iniciar Sesión</a>
+          </li>
+          {% endif %}
         </ul>
         <a class="btn btn-outline-dark fw-bold" href="{% url 'register' %}">Registro</a>
         <span class="navbar-text p-2 fst-italic">

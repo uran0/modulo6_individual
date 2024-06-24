@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container mt-5">
+    <h1>Bienvenido a la página restringida {{ user.miembro.apodo }}!</h1>
+    <p>Solo usuarios mayores de 18 años que han pasado la prueba pueden ver esta página.</p>
+</div>
+
+
+{% endblock %}
